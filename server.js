@@ -12,6 +12,7 @@ var middleWare={
         console.log('Private route hit!');
         next();
     },
+
     logger: function (req, res, next) {
 
         console.log('Request: '+req.method + ' '+req.originalUrl +' '+ new Date().toDateString() + ' '+ new Date().getDate().toString());
