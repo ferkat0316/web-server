@@ -6,19 +6,9 @@ require('dotenv').load();
 
 var app= express();
 var port=process.env.port;
+var middleWare=require('./middleWare');
 
-var middleWare={
-    requireAuthentication:function (req, res, next) {
-        console.log('Private route hit!');
-        next();
-    },
 
-    logger: function (req, res, next) {
-
-        console.log('Request: '+req.method + ' '+req.originalUrl +' '+ new Date().toDateString() + ' '+ new Date().getDate().toString());
-        next();
-    }
-};
 
 //app.use(middleWare.requireAuthentication);
 app.use(middleWare.logger);
