@@ -2,8 +2,8 @@
  * Created by Ferkat on 6/8/17.
  */
 var express=require('express');
-require('dotenv').load();
 
+require('dotenv').load();
 var app= express();
 var port=process.env.port || 3000;
 var middleWare=require('./middleWare');
